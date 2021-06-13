@@ -9,7 +9,6 @@ class CategoriesRepository implements ICategoriesRepository {
 
   private static INSTANCE: CategoriesRepository;
 
-
   private constructor() {
     this.categories = [];
   }
@@ -23,7 +22,7 @@ class CategoriesRepository implements ICategoriesRepository {
 
   create({ name, description }: ICreateCategoryDTO): void {
     const category: Category = new Category();
-
+  
     Object.assign(category, {
       name,
       description,
